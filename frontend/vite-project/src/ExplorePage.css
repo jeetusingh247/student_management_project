@@ -1,0 +1,26 @@
+/* ExplorePage.css */
+.explore-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.semester-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.semester-card {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.semester-card:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
