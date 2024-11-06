@@ -1,1 +1,2 @@
-# STRUCT {STUDIES};
+Our Group Project
+STRUCT {STUDIES};
