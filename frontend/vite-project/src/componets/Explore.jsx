@@ -1,25 +1,25 @@
 // ExplorePage.js
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 
 function ExplorePage() {
-    // Array to represent the semesters
+    const navigate = useNavigate();
+
     const semesters = [
-        { id: 1, name: "Semester 1", contentAvailable: true },
-        { id: 2, name: "Semester 2", contentAvailable: true },
-        { id: 3, name: "Semester 3", contentAvailable: true },
+        { id: 4, name: "Semester 1", contentAvailable: false },
+        { id: 4, name: "Semester 2", contentAvailable: false },
+        { id: 4, name: "Semester 3", contentAvailable: false },
         { id: 4, name: "Semester 4", contentAvailable: true },
-        { id: 5, name: "Semester 5", contentAvailable: false },
-        { id: 6, name: "Semester 6", contentAvailable: false },
-        { id: 7, name: "Semester 7", contentAvailable: false },
-        { id: 8, name: "Semester 8", contentAvailable: false },
+        { id: 4, name: "Semester 5", contentAvailable: false },
+        { id: 4, name: "Semester 6", contentAvailable: false },
+        { id: 4, name: "Semester 7", contentAvailable: false },
+        { id: 4, name: "Semester 8", contentAvailable: false },
+       
     ];
 
-    // Function to handle card click
     const handleCardClick = (semester) => {
         if (semester.contentAvailable) {
-            alert(`Showing content for ${semester.name}`);
-            // Here you can navigate to a detailed page or show more content
+            navigate(`/explore/semester${semester.id}`);
         } else {
             alert("Content Available Soon");
         }

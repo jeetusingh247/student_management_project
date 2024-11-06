@@ -2,7 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function HomePage() {
+export const  Homepage=()=> {
     const navigate = useNavigate();
 
     const handleExploreClick = () => {
@@ -17,4 +17,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+

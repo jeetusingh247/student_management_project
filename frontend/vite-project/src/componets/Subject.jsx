@@ -1,37 +1,34 @@
-// ExplorePage.js
+// SubjectsPage.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
+function SubjectsPage() {
+    const navigate = useNavigate();
 
-function Subject() {
-    // Array to represent the semesters
-    const semesters = [
-        { id: 1, name: "subject1", contentAvailable: true },
-        { id: 2, name: " subject2", contentAvailable: true },
-        { id: 3, name: "subject3", contentAvailable: true },
-        { id: 4, name: "Subject4", contentAvailable: true },
-        { id: 5, name: "Subject 5", contentAvailable: false },
-        { id: 6, name: "Semester 6", contentAvailable: false },
-       
+    const subjects = [
+        { id: 1, name: "Subject 1", contentAvailable: true },
+        { id: 2, name: "Subject 2", contentAvailable: false },
+        { id: 2, name: "Subject 3", contentAvailable: false },
+        { id: 2, name: "Subject 4", contentAvailable: false },
+        { id: 2, name: "Subject 5", contentAvailable: false },
     ];
 
-    // Function to handle card click
     const handleCardClick = (subject) => {
         if (subject.contentAvailable) {
-            alert(`Showing content for ${subject.name}`);
-            // Here you can navigate to a detailed page or show more content
+            navigate(`/explore/semester4/subject${subject.id}`);
         } else {
             alert("Content Available Soon");
         }
     };
 
     return (
-        <div className="explore-page">
-            <h2>Select a Subject</h2>
+        <div className="subjects-page">
+            <h2>Semester 4 - Subjects</h2>
             <div className="subject-cards">
-                {Subject.map((subject) => (
+                {subjects.map((subject) => (
                     <div
                         key={subject.id}
-                        className="semester-card"
+                        className="subject-card"
                         onClick={() => handleCardClick(subject)}
                     >
                         {subject.name}
@@ -42,4 +39,4 @@ function Subject() {
     );
 }
 
-export default Subject;
+export default SubjectsPage;
