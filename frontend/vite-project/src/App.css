@@ -99,9 +99,53 @@ h2 {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 600px) {
     .semester-card, .subject-card, .unit-card, .content-card {
         width: 100%;
         height: auto;
+    }
+
+    body {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .home-page, .explore-page, .subjects-page, .units-page, .content-page {
+        padding: 1em;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.8em;
+    }
+}
+
+/* modified code for page responsiveness */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .semester-card, .subject-card, .unit-card, .content-card {
+        width: 45%;
+        height: auto;
+    }
+
+    body {
+        padding: 2em;
+    }
+
+    .home-page, .explore-page, .subjects-page, .units-page, .content-page {
+        padding: 1.5em;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    button {
+        width: auto;
+        padding: 0.8em 1.5em;
     }
 }
