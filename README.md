@@ -1,1 +1,1 @@
-# student_management_project
+# STRUCT {STUDIES};
