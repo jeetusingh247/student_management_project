@@ -9,7 +9,7 @@ function HeroSection() {
       <div className="flex flex-col md:flex-row items-stretch min-h-screen">
         
         {/* Left Section: Logo and Paragraph */}
-        <div className="w-full md:w-3/5 p-8 flex flex-col justify-center items-center">
+        <div className="w-full  md:w-3/5 p-8 flex flex-col justify-center items-center">
           {/* Logo Image */}
           <div className="mb-4 flex justify-center">
             <img

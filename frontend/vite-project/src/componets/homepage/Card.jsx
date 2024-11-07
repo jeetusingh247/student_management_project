@@ -18,7 +18,7 @@ function Card({ title, subtitle, content, bgColor, textColor }) {
 // CardContainer Component with ID for linking
 function CardContainer() {
   return (
-    <div id="offering-section" className="container mx-auto px-4 py-10">
+    <div id="offering-section" className="container mx-auto  px-4 py-10">
       <h2 className="text-3xl font-bold text-center text-blue-600 mb-8">What does our website offer?</h2>
       
       {/* Responsive Card Grid */}
