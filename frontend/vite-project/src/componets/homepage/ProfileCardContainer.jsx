@@ -18,7 +18,7 @@ development, I am a creative and quick learner, always
 striving to craft innovative solutions that enhance user
 experiences."
           bgColor="bg-green-100"
-          imageUrl="/Assets/logo.jpg" // Replace with actual image URL
+          imageUrl="/Assets/saumya.jpg" // Replace with actual image URL
         />
         <ProfileCard
           name="Shiv Sablok"
@@ -42,7 +42,7 @@ real-time challenges. I am committed to creating
 impactful solutions that bridge the gap between
 technology & user needs."
           bgColor="bg-blue-100"
-          imageUrl="/Assets/logo.jpg" // Replace with actual image URL
+          imageUrl="/Assets/jeetu.jpg" // Replace with actual image URL
         />
         <ProfileCard
           name="Prince Kumar Singh"
