@@ -5,6 +5,6 @@
 @tailwind utilities;
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem;
+    scroll-padding-top: 2rem;
 
 }

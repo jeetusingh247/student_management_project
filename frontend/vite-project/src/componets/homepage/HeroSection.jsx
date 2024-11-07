@@ -18,18 +18,18 @@ function HeroSection() {
       <div className="flex flex-col md:flex-row items-stretch min-h-screen border-b border-gray-300 p-4 shadow-sm">
 
         {/* Left Section: Logo and Paragraph */}
-        <div className="w-full md:w-3/5 p-4 flex flex-col justify-center items-center mb-2 md:mb-0 md:mr-2">
+        <div className="w-full md:w-3/5 flex-col justify-center items-center mb-2 md:mb-0 md:mr-2">
         
           {/* Logo Image */}
           <div className="mb-2 flex justify-center">
             <img
-              src="/Assets/logo.png"  // Path to the logo image in the public folder
+              src="/Assets/logo.jpg"  // Path to the logo image in the public folder
               alt="STRUCT STUDIES Logo"  // Descriptive alt text
               className="w-[400px] h-auto "  // Adjusted logo size
             />
           </div>
           {/* Lorem Paragraph */}
-          <p className="text-lg text-gray-700 text-center md:text-left">
+          <p className="text-lg text-gray-700 text-center mt-10 md:text-left">
             Welcome to <span className="font-bold text-black">STRUCT {`{STUDIES}`}</span>, where
             structured support meets academic ambition. What began as a senior-led initiative to
             help juniors has evolved into a dedicated platform tailored to make university
