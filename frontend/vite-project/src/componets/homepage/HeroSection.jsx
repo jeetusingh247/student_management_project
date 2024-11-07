@@ -13,7 +13,7 @@ function HeroSection() {
           {/* Logo Image */}
           <div className="mb-4 flex justify-center">
             <img
-              src="/logo.jpg"  // Path to the logo image in the public folder
+              src="/Assets/logo.png"  // Path to the logo image in the public folder
               alt="STRUCT STUDIES Logo"  // Descriptive alt text
               className="w-[500px] h-auto"  // Logo size, adjust width as needed
             />
@@ -31,9 +31,9 @@ function HeroSection() {
         <div className="w-full md:w-3/5 p-8 flex justify-center">
           <div className="w-full h-full">
             <img
-              src="https://pwskills.com/images/homePage/heroBgImage.webp"  // Image URL
+              src="/Assets/section_One_Side_Image.png"  // Image URL
               alt="Hero Background Image"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-contain rounded-lg"
             />
           </div>
         </div>
