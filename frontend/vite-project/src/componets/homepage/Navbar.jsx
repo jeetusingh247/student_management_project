@@ -33,13 +33,13 @@ function Navbar() {
                 </a>
             </li>
             <li>
-                <a href="/explore" className="relative font-bold text-[17px] text-[rgb(27,33,36)] leading-[22px] hover:text-blue-500 transition-colors duration-300 group">
+                <a href="#explore" className="relative font-bold text-[17px] text-[rgb(27,33,36)] leading-[22px] hover:text-blue-500 transition-colors duration-300 group">
                     Explore
                     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </li>
             <li>
-                <a href="/contact" className="relative font-bold text-[17px] text-[rgb(27,33,36)] leading-[22px] hover:text-blue-500 transition-colors duration-300 group">
+                <a href="#contact" className="relative font-bold text-[17px] text-[rgb(27,33,36)] leading-[22px] hover:text-blue-500 transition-colors duration-300 group">
                     Contact
                     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>

@@ -1,21 +1,31 @@
 import React from 'react';
 import ProfileCardContainer from './ProfileCardContainer';
 import CardContainer from './Card';
+import ExploreButton from './ExploreButton';
+import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleExploreClick = () => {
+    navigate("/explore"); // Navigate to the Explore page
+  };
+
   return (
     <div id="hero-section" className="container mx-auto px-4 py-4 max-h-screen">
       {/* Main flex container for left and right sections */}
-      <div className="flex flex-col md:flex-row items-stretch min-h-screen">
-        
+      <div className="flex flex-col md:flex-row items-stretch min-h-screen border-b border-gray-300 p-4 shadow-sm">
+
         {/* Left Section: Logo and Paragraph */}
-        <div className="w-full  md:w-3/5 p-8 flex flex-col justify-center items-center">
+        <div className="w-full md:w-3/5 p-4 flex flex-col justify-center items-center mb-2 md:mb-0 md:mr-2">
+        
           {/* Logo Image */}
-          <div className="mb-4 flex justify-center">
+          <div className="mb-2 flex justify-center">
             <img
               src="/Assets/logo.png"  // Path to the logo image in the public folder
               alt="STRUCT STUDIES Logo"  // Descriptive alt text
-              className="w-[500px] h-auto"  // Logo size, adjust width as needed
+              className="w-[400px] h-auto "  // Adjusted logo size
             />
           </div>
           {/* Lorem Paragraph */}
@@ -28,7 +38,7 @@ function HeroSection() {
         </div>
 
         {/* Right Section: Single Image */}
-        <div className="w-full md:w-3/5 p-8 flex justify-center">
+        <div className="w-full md:w-3/5 p-4 flex justify-center">
           <div className="w-full h-full">
             <img
               src="/Assets/section_One_Side_Image.png"  // Image URL
@@ -40,10 +50,22 @@ function HeroSection() {
       </div>
 
       {/* Card Container Section */}
-      <CardContainer />
+      <div className="border-b border-gray-300 mt-4 p-4">
+        <CardContainer />
+      </div>
 
       {/* Profile Card Section (added below CardContainer) */}
-      <ProfileCardContainer  />
+      <div className="border-b border-gray-300 mt-4 p-4">
+        <ProfileCardContainer />
+      </div>
+
+      {/* Explore Button */}
+      <div className="flex justify-center mt-4 p-4">
+        <ExploreButton onClick={handleExploreClick} />
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

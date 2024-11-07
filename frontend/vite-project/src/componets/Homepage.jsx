@@ -8,11 +8,7 @@ import Navbar from "./homepage/Navbar";
 import ExploreButton from "./homepage/ExploreButton";
 
 export const Homepage = () => {
-    const navigate = useNavigate();
-
-    const handleExploreClick = () => {
-        navigate("/explore"); // Navigate to the Explore page
-    };
+    
 
     return (
         <div className="relative">
@@ -22,9 +18,7 @@ export const Homepage = () => {
                 <HeroSection />
             </div>
             {/* Add ExploreButton with enough margin to ensure it's not too close to HeroSection */}
-            <div className="mt-24 lg:mt-32">
-                <ExploreButton onClick={handleExploreClick} />
-            </div>
+            
         </div>
     );
 };

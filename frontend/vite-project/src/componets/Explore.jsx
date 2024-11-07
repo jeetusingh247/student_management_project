@@ -6,14 +6,14 @@ function ExplorePage() {
     const navigate = useNavigate();
 
     const semesters = [
-        { id: 4, name: "Semester 1", contentAvailable: false },
-        { id: 4, name: "Semester 2", contentAvailable: false },
-        { id: 4, name: "Semester 3", contentAvailable: false },
+        { id: 1, name: "Semester 1", contentAvailable: false },
+        { id: 2, name: "Semester 2", contentAvailable: false },
+        { id: 3, name: "Semester 3", contentAvailable: false },
         { id: 4, name: "Semester 4", contentAvailable: true },
-        { id: 4, name: "Semester 5", contentAvailable: false },
-        { id: 4, name: "Semester 6", contentAvailable: false },
-        { id: 4, name: "Semester 7", contentAvailable: false },
-        { id: 4, name: "Semester 8", contentAvailable: false },
+        { id: 5, name: "Semester 5", contentAvailable: false },
+        { id: 6, name: "Semester 6", contentAvailable: false },
+        { id: 7, name: "Semester 7", contentAvailable: false },
+        { id: 8, name: "Semester 8", contentAvailable: false },
        
     ];
 

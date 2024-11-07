@@ -8,9 +8,9 @@ function SubjectsPage() {
     const subjects = [
         { id: 1, name: "Subject 1", contentAvailable: true },
         { id: 2, name: "Subject 2", contentAvailable: false },
-        { id: 2, name: "Subject 3", contentAvailable: false },
-        { id: 2, name: "Subject 4", contentAvailable: false },
-        { id: 2, name: "Subject 5", contentAvailable: false },
+        { id: 3, name: "Subject 3", contentAvailable: false },
+        { id: 4, name: "Subject 4", contentAvailable: false },
+        { id: 5, name: "Subject 5", contentAvailable: false },
     ];
 
     const handleCardClick = (subject) => {
