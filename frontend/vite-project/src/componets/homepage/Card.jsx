@@ -45,7 +45,7 @@ function CardContainer() {
           textColor="text-blue-700"
         />
         <Card 
-          title="Extra Docs & Assessments"
+          title="Extra Documentations & Assessments"
           subtitle="Boost Your Knowledge with Extras:"
           content="Go beyond the basics with additional documentation and assessments tailored to enhance your understanding. These resources provide deeper insights and a way to test your knowledge effectively."
           bgColor="bg-green-100"

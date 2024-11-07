@@ -23,17 +23,21 @@ function HeroSection() {
           {/* Logo Image */}
           <div className="mb-2 flex justify-center">
             <img
-              src="/Assets/logo.jpg"  // Path to the logo image in the public folder
+              src="/Assets/logo.png"  // Path to the logo image in the public folder
               alt="STRUCT STUDIES Logo"  // Descriptive alt text
-              className="w-[400px] h-auto "  // Adjusted logo size
+              className="w-[260px] h-auto "  // Adjusted logo size
             />
           </div>
           {/* Lorem Paragraph */}
-          <p className="text-lg text-gray-700 text-center mt-10 md:text-left">
-            Welcome to <span className="font-bold text-black">STRUCT {`{STUDIES}`}</span>, where
-            structured support meets academic ambition. What began as a senior-led initiative to
+          <p className="text-lg text-gray-700 text-center mt-10 md:text-center">
+            Welcome to <span className="font-bold text-black">STRUCT {`{STUDIES}`}; !!</span>, <br />"where
+            structured support meets academic ambition"
+          </p>
+          <br/>
+            <p className='text-center'> What began as a senior-led initiative to
             help juniors has evolved into a dedicated platform tailored to make university
-            exam prep seamless and focused.
+            exam prep seamless and focused.<br/>
+            This project represents a commitment to quality education, prioritizing ease of learning, accessibility, and continuous improvement, making it an invaluable tool for students striving to excel academically.
           </p>
         </div>
 

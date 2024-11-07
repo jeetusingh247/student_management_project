@@ -30,7 +30,7 @@ mindset with creative design and problem-solving
 skills. With expertise in data collection and management, I
 strive to build impactful and efficient solutions."
           bgColor="bg-blue-100"
-          imageUrl="/Assets/logo.jpg" // Replace with actual image URL
+          imageUrl="/Assets/shiv.jpg" // Replace with actual image URL
         />
         <ProfileCard
           name="Jeetu Singh"
@@ -53,7 +53,7 @@ Known for my consistency, discipline, and commitment, I
 strive to deliver high-quality solutions while continuously
 improving my craft."
           bgColor="bg-green-100"
-          imageUrl="/Assets/logo.jpg" // Replace with actual image URL
+          imageUrl="/Assets/unknown_person.png" // Replace with actual image URL
         />
       </div>
     </div>
