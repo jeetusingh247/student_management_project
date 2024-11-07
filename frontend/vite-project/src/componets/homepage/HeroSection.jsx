@@ -15,7 +15,7 @@ function HeroSection() {
             <img
               src="/logo.jpg"  // Path to the logo image in the public folder
               alt="STRUCT STUDIES Logo"  // Descriptive alt text
-              className="w-64 h-auto"  // Logo size, adjust width as needed
+              className="w-[500px] h-auto"  // Logo size, adjust width as needed
             />
           </div>
           {/* Lorem Paragraph */}
