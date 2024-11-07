@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ProfileCardContainer from './ProfileCardContainer';
+import CardContainer from './Card';
+
 function HeroSection() {
   return (
     <div id="hero-section" className="container mx-auto px-4 py-10 min-h-screen">
@@ -12,15 +15,16 @@ function HeroSection() {
           <div className="mb-4 flex justify-center">
             <img
               src="/logo.jpg"  // Path to the logo image in the public folder
-              alt="Logo"
+              alt="STRUCT STUDIES Logo"  // Descriptive alt text
               className="w-64 h-auto"  // Logo size, adjust width as needed
             />
           </div>
           {/* Lorem Paragraph */}
-          <p className="text-lg text-gray-700 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            lacinia quam sit amet tortor pretium, non aliquet libero
-            consequat. Curabitur sed justo vitae risus tincidunt tempor.
+          <p className="text-lg text-gray-700 text-center md:text-left">
+            Welcome to <span className="font-bold text-black">STRUCT {`{STUDIES}`}</span>, where
+            structured support meets academic ambition. What began as a senior-led initiative to
+            help juniors has evolved into a dedicated platform tailored to make university
+            exam prep seamless and focused.
           </p>
         </div>
 
@@ -29,12 +33,18 @@ function HeroSection() {
           <div className="w-full h-full">
             <img
               src="https://pwskills.com/images/homePage/heroBgImage.webp"  // Image URL
-              alt="Hero Image"
+              alt="Hero Background Image"
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
       </div>
+
+      {/* Card Container Section */}
+      <CardContainer />
+
+      {/* Profile Card Section (added below CardContainer) */}
+      <ProfileCardContainer  />
     </div>
   );
 }

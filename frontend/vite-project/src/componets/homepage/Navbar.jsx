@@ -21,10 +21,10 @@ function Navbar() {
             <li><a href="#hero-section" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Home
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a></li>
-            <li><a href="/offering" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Offering
+            <li><a href="#offering-section" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Offering
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a></li>
-            <li><a href="/team" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Team
+            <li><a href="#profile-section" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Team
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a></li>
             <li><a href="/explore" className="relative text-gray-700 hover:text-blue-500 transition-colors duration-300 group">Explore
