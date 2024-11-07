@@ -1,11 +1,10 @@
 import React from 'react';
-
 import ProfileCardContainer from './ProfileCardContainer';
 import CardContainer from './Card';
 
 function HeroSection() {
   return (
-    <div id="hero-section" className="container mx-auto px-4 py-10 min-h-screen">
+    <div id="hero-section" className="container mx-auto px-4 py-4 max-h-screen">
       {/* Main flex container for left and right sections */}
       <div className="flex flex-col md:flex-row items-stretch min-h-screen">
         
