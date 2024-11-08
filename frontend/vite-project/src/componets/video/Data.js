@@ -1,9 +1,9 @@
 // data.js
 export const unitVideos = {
     1: [
-      { id: "dQw4w9WgXcQ", title: "Video 1: Unit 1 Introduction" },
-      { id: "V-_O7nl0Ii0", title: "Video 2: Unit 1 Basics" },
-      { id: "sBws8MSXN7A", title: "Video 3: Unit 1 Advanced Topics" },
+      { id: 'Nnop2walGmM', title: 'Professional Video 1' },
+    { id: 'hxMNYkLN7tI', title: 'Professional Video 2' },
+    { id: 'Qbhx8BEeCm4', title: 'Professional Video 3' },
     ],
     2: [
       { id: "sBws8MSXN7A", title: "Video 1: Unit 2 Introduction" },
