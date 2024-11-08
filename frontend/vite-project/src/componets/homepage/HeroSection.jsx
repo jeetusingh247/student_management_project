@@ -34,9 +34,9 @@ function HeroSection() {
             structured support meets academic ambition"
           </p>
           <br/>
-            <p className='text-center'> What began as a senior-led initiative to
+            <p className='text-justify'> What began as a senior-led initiative to
             help juniors has evolved into a dedicated platform tailored to make university
-            exam prep seamless and focused.<br/>
+            exam prep seamless and focused.<br/><br />
             This project represents a commitment to quality education, prioritizing ease of learning, accessibility, and continuous improvement, making it an invaluable tool for students striving to excel academically.
           </p>
         </div>

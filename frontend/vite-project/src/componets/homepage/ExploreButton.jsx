@@ -11,7 +11,8 @@ const ExploreButton = ({ onClick }) => {
             
             <button
                 onClick={onClick}
-                className="px-10 py-6 bg-green-600 text-white text-3xl rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out mb-6"
+                className="px-10 py-6 bg-green-600 text-white text-3xl rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out mb-6  
+                  transform hover:scale-105"
             >
                 Explore
             </button>

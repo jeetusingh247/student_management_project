@@ -25,7 +25,7 @@ experiences."
           description="I am passionate about research and its transformative
 potential, driven by a curiosity to solve complex problems
 with structured solutions. As I am on to my web
-development journey, I aim to combine my researchoriented
+development journey, I aim to combine my research oriented
 mindset with creative design and problem-solving
 skills. With expertise in data collection and management, I
 strive to build impactful and efficient solutions."

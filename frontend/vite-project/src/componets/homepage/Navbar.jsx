@@ -51,7 +51,7 @@ function Navbar() {
         <div className={`fixed top-0 left-0 right-0 z-50 w-full border-2 ${sticky ? 'shadow-md bg-gray-200' : 'bg-transparent'} transition-all duration-300`}>
             <nav className="container mx-auto flex items-center justify-between px-4 py-3">
                 <a href="/" className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-bold ml-4">
-                    STRUCT&#123;STUDY&#125;;
+                    STRUCT&#123;STUDIES&#125;;
                 </a>
 
                 <div className="hidden lg:flex space-x-4 mr-4">

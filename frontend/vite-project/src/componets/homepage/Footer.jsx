@@ -35,7 +35,7 @@ const Footer = () => {
                         className="w-10 h-10 hover:scale-110 transition-transform"
                     />
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=princesingh203188@gmail.com">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=princesingh203188@gmail.com" target="_blank" rel="noopener noreferrer">
                     <img
                         src="/Assets/gmail_logo.png"
                         alt="Gmail"
@@ -57,7 +57,7 @@ const Footer = () => {
             <br />
             <br />
             <div className="bg-gray-200 text-gray-800 font-semibold text-center w-full py-2">
-                &copy; {new Date().getFullYear()} Struct Studies. All rights reserved.
+                &copy; {new Date().getFullYear()} STRUCT {`{STUDIES}`}; All rights reserved.
             </div>
         </footer>
     );
