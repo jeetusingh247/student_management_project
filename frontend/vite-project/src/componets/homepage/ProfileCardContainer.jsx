@@ -53,7 +53,7 @@ Known for my consistency, discipline, and commitment, I
 strive to deliver high-quality solutions while continuously
 improving my craft."
           bgColor="bg-green-100"
-          imageUrl="/Assets/unknown_person.png" // Replace with actual image URL
+          imageUrl="/Assets/prince.jpg" // Replace with actual image URL
         />
       </div>
     </div>
