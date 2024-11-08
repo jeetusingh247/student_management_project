@@ -11,7 +11,6 @@ function UnitsPage() {
         { id: 3, name: "Unit 3" },
         { id: 4, name: "Unit 4" },
         { id: 5, name: "Unit 5" },
-       
     ];
 
     const handleUnitClick = (unit) => {
