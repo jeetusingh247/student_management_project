@@ -29,6 +29,17 @@ function ExplorePage() {
     return (
         <div>
             <Navbar2 />
+            <div className="logo-header flex flex-col md:flex-row items-center justify-center mt-16 mb-8">
+                <img
+                    src="/Assets/logo.png"
+                    alt="Website Logo"
+                    className="logo mb-4 md:mb-0 md:mr-20 w-24 h-24 md:w-32 md:h-32"
+                />
+                <h4 className="text-lg md:text-2xl font-semibold text-center md:text-left">
+                Select the semester for which you need to access
+                the curated & structured study material…
+                </h4>
+            </div>
             <div
                 style={{
                     padding: "40px",
@@ -45,7 +56,7 @@ function ExplorePage() {
                         color: "#333",
                     }}
                 >
-                    Select Your Semester
+                    Your Semester
                 </h2>
                 <div
                     style={{
