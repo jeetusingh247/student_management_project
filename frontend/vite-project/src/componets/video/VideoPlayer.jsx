@@ -4,16 +4,16 @@ import YouTube from 'react-youtube';
 
 const VideoPlayer = ({ videoId }) => {
   const opts = {
-    height: '400',
     width: '100%',
+    height: '100%',
     playerVars: {
       autoplay: 1,
     },
   };
 
   return (
-    <div className="p-4">
-      <YouTube videoId={videoId} opts={opts} />
+    <div className="w-full h-full p-0 m-0">
+      <YouTube videoId={videoId} opts={opts} className="w-full h-full" />
     </div>
   );
 };
