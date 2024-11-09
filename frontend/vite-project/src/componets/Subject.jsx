@@ -8,15 +8,15 @@ function SubjectPage() {
   const navigate = useNavigate();
 
   const subjects = [
-    { id: 1, name: "Mathematics", contentAvailable: true },
+    { id: 1, name: "Mathematics", contentAvailable: false },
     { id: 2, name: "Physics", contentAvailable: true },
-    { id: 3, name: "Chemistry", contentAvailable: false },
+    { id: 3, name: "Chemistry", contentAvailable: true },
     { id: 4, name: "Biology", contentAvailable: true },
     { id: 5, name: "Computer Science", contentAvailable: true },
   ];
 
   const handleCardClick = (subject) => {
-    navigate(`/subject/${subject.id}`);
+    navigate(`/explore/semester4/subject${subject.id}`);
   };
 
 return (
