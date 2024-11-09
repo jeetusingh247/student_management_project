@@ -8,11 +8,14 @@ function SubjectPage() {
   const navigate = useNavigate();
 
   const subjects = [
-    { id: 1, name: "Mathematics", contentAvailable: false },
-    { id: 2, name: "Physics", contentAvailable: true },
-    { id: 3, name: "Chemistry", contentAvailable: true },
-    { id: 4, name: "Biology", contentAvailable: true },
-    { id: 5, name: "Computer Science", contentAvailable: true },
+    { id: 1, name: "Subject1", contentAvailable: false },
+    { id: 2, name: "Subject2", contentAvailable: true },
+    { id: 3, name: "Subject3", contentAvailable: true },
+    { id: 4, name: "Subject4", contentAvailable: true },
+    { id: 5, name: "Subject5", contentAvailable: true },
+    { id: 6, name: "Subject6", contentAvailable: true },
+    { id: 7, name: "Subject7", contentAvailable: true },
+    { id: 8, name: "Subject8", contentAvailable: true },
   ];
 
   const handleCardClick = (subject) => {
@@ -25,7 +28,7 @@ return (
             <Navbar2 /> {/* Include Navbar2 */}
         </div>
         <div className="subjects-page mt-8"> {/* Added margin-top for spacing */}
-            <h2 className="text-3xl font-bold text-center text-blue-600 mb-8 mt-12">Semester 4 - Subjects</h2> {/* Added margin-top for more spacing */}
+            <h2 className="text-3xl font-bold text-center text-black-600 mb-8 mt-12">Semester 4 - Subjects</h2> {/* Added margin-top for more spacing */}
             <div className="subject-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {subjects.map((subject) => (
                     <div
@@ -55,11 +58,11 @@ return (
                 border-radius: 8px;
                 cursor: pointer;
                 transition: transform 0.2s, box-shadow 0.2s;
-                background-color: #f9f9f9;
+                background-color: #2196F3;
                 width: calc(25% - 40px); /* Ensure all cards have the same width */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                background-color: #ffffff; /* Professional white background */
-                color: #333333; /* Professional text color */
+                background-color: #4caf50; /* Professional white background */
+                color: #fffff; /* Professional text color */
             }
             .subject-card:hover {
                 transform: scale(1.05);
@@ -67,7 +70,7 @@ return (
                 background-color: #e6f7ff; /* Light blue hover background */
             }
             .subject-card h3 {
-                color: #007bff; /* Professional blue text color */
+                color: #fffff; /* Professional blue text color */
             }
             @media (max-width: 768px) {
                 .subject-card {
