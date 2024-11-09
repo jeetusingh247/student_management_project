@@ -19,7 +19,11 @@ function SubjectPage() {
   ];
 
   const handleCardClick = (subject) => {
-    navigate(`/explore/semester4/subject${subject.id}`);
+    if(!subject.contentAvailable){
+    navigate(`/explore/semester4/subject${subject.id}`);}
+    else{
+        alert("Content not available for this subject.") // Alert for unavailable content
+    }
   };
 
 return (
@@ -58,7 +62,7 @@ return (
                 border-radius: 8px;
                 cursor: pointer;
                 transition: transform 0.2s, box-shadow 0.2s;
-                background-color: #2196F3;
+                background-color: #f9f9f9;
                 width: calc(25% - 40px); /* Ensure all cards have the same width */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 background-color: #4caf50; /* Professional white background */
