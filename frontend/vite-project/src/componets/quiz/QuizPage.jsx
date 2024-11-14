@@ -12,6 +12,18 @@ const questionSets = {
         { id: 1, question: "Unit 2 Question 1", options: ["A", "B", "C", "D"], answer: "C" },
         { id: 2, question: "Unit 2 Question 2", options: ["A", "B", "C", "D"], answer: "D" },
     ],
+    "3": [
+      { id: 1, question: "Unit 2 Question 1", options: ["A", "B", "C", "D"], answer: "C" },
+      { id: 2, question: "Unit 2 Question 2", options: ["A", "B", "C", "D"], answer: "D" },
+  ],
+  "4": [
+    { id: 1, question: "Unit 2 Question 1", options: ["A", "B", "C", "D"], answer: "C" },
+    { id: 2, question: "Unit 2 Question 2", options: ["A", "B", "C", "D"], answer: "D" },
+],
+"5": [
+  { id: 1, question: "Unit 2 Question 1", options: ["A", "B", "C", "D"], answer: "C" },
+  { id: 2, question: "Unit 2 Question 2", options: ["A", "B", "C", "D"], answer: "D" },
+],
 };
 
 function QuizPage() {
