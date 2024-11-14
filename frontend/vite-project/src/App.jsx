@@ -6,9 +6,11 @@ import SubjectsPage from "./componets/Subject";
 import UnitsPage from "./componets/UnitPage";
 import ContentPage from "./componets/ContentPage";
 import { Homepage } from "./componets/Homepage";
+import VideoPlaylist from "./componets/video/VideoPlaylist";
+; // Import the QuizPage component
 
 import './App.css';
-import VideoPlaylist from "./componets/video/VideoPlaylist"; // Ensure path is correct
+import QuizPage from "./componets/quiz/QuizPage";
 
 function App() {
     return (
@@ -19,20 +21,33 @@ function App() {
                 <Route path="/explore/semester4" element={<SubjectsPage />} />
                 <Route path="/explore/semester4/subject1" element={<UnitsPage />} />
                 <Route path="/explore/semester4/subject1/unit/:unitId" element={<ContentPage />} />
-                
-                {/* Pass unitId from URL to VideoPlaylist component */}
+
+                {/* Video route */}
                 <Route 
                     path="/explore/semester4/subject1/unit/:unitId/video" 
                     element={<VideoPlaylistWithUnitId />} 
+                />
+
+                {/* New Quiz route for assignments */}
+                <Route 
+                    path="/explore/semester4/subject1/unit/:unitId/assignment" 
+                    element={<QuizPageWithUnitId />} 
                 />
             </Routes>
         </Router>
     );
 }
 
+// Wrapper for VideoPlaylist to pass unitId from URL
 const VideoPlaylistWithUnitId = () => {
-    const { unitId } = useParams(); // Extract unitId from the URL
+    const { unitId } = useParams();
     return <VideoPlaylist selectedUnit={parseInt(unitId)} />;
+}
+
+// Wrapper for QuizPage to pass unitId from URL
+const QuizPageWithUnitId = () => {
+    const { unitId } = useParams();
+    return <QuizPage unitId={parseInt(unitId)} />;
 }
 
 export default App;
