@@ -19,6 +19,7 @@ function App() {
                 <Route path="/explore/semester4" element={<SubjectsPage />} />
                 <Route path="/explore/semester4/subject1" element={<UnitsPage />} />
                 <Route path="/explore/semester4/subject1/unit/:unitId" element={<ContentPage />} />
+                {/* <Route path="/assessment" element={<AssessmentPage />} /> Add the route for AssessmentPage */}
                 
                 {/* Pass unitId from URL to VideoPlaylist component */}
                 <Route 
