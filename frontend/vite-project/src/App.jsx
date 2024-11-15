@@ -1,3 +1,4 @@
+
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
@@ -7,7 +8,8 @@ import UnitsPage from "./componets/UnitPage";
 import ContentPage from "./componets/ContentPage";
 import { Homepage } from "./componets/Homepage";
 import VideoPlaylist from "./componets/video/VideoPlaylist";
-// Import the QuizPage component
+; // Import the QuizPage component
+
 import './App.css';
 import QuizPage from "./componets/quiz/QuizPage";
 
@@ -20,9 +22,8 @@ function App() {
                 <Route path="/explore/semester4" element={<SubjectsPage />} />
                 <Route path="/explore/semester4/subject1" element={<UnitsPage />} />
                 <Route path="/explore/semester4/subject1/unit/:unitId" element={<ContentPage />} />
-                {/* <Route path="/assessment" element={<AssessmentPage />} /> Add the route for AssessmentPage */}
-                
-                {/* Pass unitId from URL to VideoPlaylist component */}
+
+                {/* Video route */}
                 <Route 
                     path="/explore/semester4/subject1/unit/:unitId/video" 
                     element={<VideoPlaylistWithUnitId />} 

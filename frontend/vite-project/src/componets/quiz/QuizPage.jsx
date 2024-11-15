@@ -5,7 +5,7 @@ import Footer from "../homepage/Footer";
 
 const questionSets = {
     "1": [
-        { id: 1, question: "Unit 1 Question 1", options: ["A", "B", "C", "D"], answer: "A" },
+        { id: 1, question: "what is your name?", options: ["A", "B", "C", "D"], answer: "A" },
         { id: 2, question: "Unit 1 Question 2", options: ["A", "B", "C", "D"], answer: "B" },
     ],
     "2": [
@@ -57,7 +57,7 @@ function QuizPage() {
 
             {/* Main Content Area with gradient background */}
             <div
-                className="flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500 p-4 flex-1 mt-16"
+                className="flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500  p-4 flex-1 mt-16"
             >
                 <div className="bg-white bg-opacity-90 rounded-lg p-6 shadow-lg max-w-xl w-full mx-4 text-center">
                     <h2 className="text-3xl font-bold mb-6 text-black">Unit {unitId} Assignment Quiz</h2>
