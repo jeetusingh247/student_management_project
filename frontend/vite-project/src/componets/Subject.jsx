@@ -7,11 +7,11 @@ function SubjectPage() {
   const navigate = useNavigate();
 
   const subjects = [
-    { id: 1, name: "Digital Electronics", contentAvailable: true },
+    { id: 1, name: "Digital Electronics", contentAvailable: false },
     { id: 2, name: "OOPS with Java", contentAvailable: false },
     { id: 3, name: "Operating System", contentAvailable: false },
     { id: 4, name: "Universal Human Values", contentAvailable: false },
-    { id: 5, name: "Theory Of Computation", contentAvailable: false },
+    { id: 5, name: "Theory Of Computation", contentAvailable: true },
     { id: 6, name: "Python Programming", contentAvailable: false },
   ];
 
