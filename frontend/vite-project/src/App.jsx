@@ -12,6 +12,7 @@ import VideoPlaylist from "./componets/video/VideoPlaylist";
 
 import './App.css';
 import QuizPage from "./componets/quiz/QuizPage";
+import Chatbot from "./componets/Chatbot";
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                     element={<QuizPageWithUnitId />} 
                 />
             </Routes>
+            <Chatbot />
         </Router>
     );
 }
