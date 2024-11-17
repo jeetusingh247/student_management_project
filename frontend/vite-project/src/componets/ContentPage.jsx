@@ -1,4 +1,3 @@
-// ContentPage.js
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar2 from "./Navbar2";
@@ -26,7 +25,7 @@ const ContentPage = () => {
   };
 
   const startQuiz = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false); // Close the modal
     navigate(`/explore/semester4/subject1/unit/${unitId}/assignment`, { state: { name } });
   };
 
@@ -70,15 +69,15 @@ const ContentPage = () => {
             />
             <div className="flex justify-end space-x-4">
               <button
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => setIsModalOpen(false)} // Close the modal
                 className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
               >
                 Cancel
               </button>
               <button
-                onClick={startQuiz}
+                onClick={startQuiz} // Navigate to quiz page
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                disabled={!name.trim()}
+                disabled={!name.trim()} // Disable button if name is empty
               >
                 Start Quiz
               </button>
