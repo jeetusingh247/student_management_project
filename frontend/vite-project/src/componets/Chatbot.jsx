@@ -26,28 +26,33 @@ function Chatbot() {
         <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10">
             <button
                 onClick={() => setIsVisible(!isVisible)}
-                className="bg-blue-500 text-white p-2 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+                className="bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
             >
                 {isVisible ? "Hide StudyBot" : "Open StudyBot"}
             </button>
             {isVisible && (
-                <div className="w-72 h-80 sm:w-80 sm:h-96 md:w-96 md:h-96 lg:w-96 lg:h-96 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden mt-2">
-                    <div className="p-4 h-4/5 overflow-y-auto">
+                <div className="w-72 h-96 sm:w-80 sm:h-96 md:w-96 md:h-96 lg:w-96 lg:h-96 bg-gray-900 border border-gray-700 rounded-lg shadow-lg overflow-hidden mt-2 flex flex-col">
+                    <div className="bg-gray-800 text-white p-4 flex items-center justify-between">
+                        <h2 className="text-lg font-semibold">StudyBot</h2>
+                        <button onClick={() => setIsVisible(false)} className="text-white">✕</button>
+                    </div>
+                    <div className="flex-1 p-4 overflow-y-auto">
                         {messages.map((message, index) => (
-                            <div key={index} className={`mb-2 p-2 rounded-lg ${message.sender === "user" ? "bg-blue-100 text-right" : "bg-gray-100 text-left"}`}>
+                            <div key={index} className={`mb-2 p-2 rounded-lg max-w-xs ${message.sender === "user" ? "bg-green-500 text-white self-end" : "bg-gray-700 text-white self-start"}`}>
+                                <span className="block text-xs font-semibold mb-1">{message.sender === "user" ? "User" : "StudyBot"}</span>
                                 {message.text}
                             </div>
                         ))}
                     </div>
-                    <div className="p-4 border-t border-gray-300 flex">
+                    <div className="p-4 border-t border-gray-700 flex items-center">
                         <input
                             type="text"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Type a message..."
-                            className="flex-1 p-2 border border-gray-300 rounded-lg mr-2"
+                            className="flex-1 p-2 bg-gray-800 text-white border border-gray-700 rounded-full mr-2"
                         />
-                        <button onClick={handleSendMessage} className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        <button onClick={handleSendMessage} className="bg-green-500 text-white p-2 rounded-full hover:bg-green-700 transition duration-300">
                             Send
                         </button>
                     </div>
