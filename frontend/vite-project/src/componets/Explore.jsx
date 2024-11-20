@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "./homepage/Footer";
 import Navbar2 from "./Navbar2";
+import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
 
 function ExplorePage() {
   const navigate = useNavigate();
@@ -21,13 +22,17 @@ function ExplorePage() {
     if (semester.contentAvailable) {
       navigate(`/explore/semester${semester.id}`);
     } else {
-      alert("Content Available Soon");
+      toast.error("Content will be available soon!", {
+        duration: 3000,
+        position: "top-center",
+      });
     }
   };
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar2 />
+      <Toaster /> {/* Add Toaster component to display toast notifications */}
       <div className="logo-header flex flex-col md:flex-row items-center justify-center mt-16 mb-6">
         <img
           src="/Assets/logo.png"
@@ -62,30 +67,30 @@ function ExplorePage() {
           max-width: 1200px;
         }
         .semester-card {
-  padding: 36px; /* Adjusted padding */
-  border-radius: 16px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background-color: #68d391; /* Default green color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: (100%); /* Reduced width */
-  height: auto; /* Increased height */
-}
-.semester-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #38b2ac; /* Darker green on hover */
-}
-@media (max-width: 768px) {
-  .semester-card {
-    flex: 1 1 calc(50% - 64px); /* Adjusted width for medium screens */
-  }
-}
-@media (max-width: 480px) {
-  .semester-card {
-    flex: 1 1 100%; /* Full width for small screens */
-  }
-}
+          padding: 36px;
+          border-radius: 16px;
+          cursor: pointer;
+          transition: transform 0.2s, box-shadow 0.2s;
+          background-color: #68d391;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          height: auto;
+        }
+        .semester-card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          background-color: #38b2ac;
+        }
+        @media (max-width: 768px) {
+          .semester-card {
+            flex: 1 1 calc(50% - 64px);
+          }
+        }
+        @media (max-width: 480px) {
+          .semester-card {
+            flex: 1 1 100%;
+          }
+        }
       `}</style>
     </div>
   );

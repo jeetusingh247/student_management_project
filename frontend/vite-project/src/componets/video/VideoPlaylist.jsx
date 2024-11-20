@@ -1,4 +1,3 @@
-// VideoPlaylist.js
 import React, { useState, useEffect } from "react";
 import { unitVideos } from "./Data.js";
 import VideoList from "./VideoList";
@@ -29,15 +28,15 @@ const VideoPlaylist = ({ selectedUnit }) => {
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-screen bg-gray-100">
-      {/* Video Playlist Sidebar - 100% width on mobile, 25% on large screens */}
+      {/* Video Playlist Sidebar - Scrollable */}
       <div
-        className="w-full lg:w-1/4 bg-gray-200 p-2 flex flex-col"
+        className="w-full lg:w-1/4 bg-gray-200 p-2 flex flex-col overflow-y-auto h-screen"
         style={{
           borderRight: "2px solid #ccc",
           boxShadow: "2px 0 5px rgba(0, 0, 0, 0.1)"
         }}
       >
-        <h3 className="text-center font-bold text-gray-700 mb-4">Playlist</h3>
+        <h3 className="text-center font-bold text-gray-700 mb-4"></h3>
         <VideoList 
           videos={videos} 
           onVideoSelect={handleVideoSelect} 
@@ -46,7 +45,7 @@ const VideoPlaylist = ({ selectedUnit }) => {
         />
       </div>
 
-      {/* Video Player - Full height on mobile, 75% width on large screens */}
+      {/* Video Player - Fixed right side */}
       <div className="w-full lg:w-3/4 flex justify-center items-center bg-white h-screen lg:h-auto">
         <div
           className="video-container rounded-md border border-gray-300 w-full h-full lg:w-11/12 lg:h-5/6"
@@ -74,3 +73,4 @@ const VideoPlaylist = ({ selectedUnit }) => {
 };
 
 export default VideoPlaylist;
+

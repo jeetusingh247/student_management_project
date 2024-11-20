@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "./Navbar2"; // Import Navbar2
 import Footer from "./homepage/Footer"; // Import Footer
+import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
 
 function SubjectPage() {
   const navigate = useNavigate();
@@ -19,18 +20,22 @@ function SubjectPage() {
     if (subject.contentAvailable) {
       navigate(`/explore/semester4/subject${subject.id}`);
     } else {
-      alert("Content not available for this subject."); // Alert for unavailable content
+      toast.error("Content will be available soon!", {
+        duration: 3000,
+        position: "top-center",
+      });
     }
   };
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar2 />
+      <Toaster /> {/* Add Toaster for toast notifications */}
       <div className="logo-header flex flex-col md:flex-row items-center justify-center mt-16 mb-6">
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-20 w-64 h-64 md:w-64md:h-64"
+          className="logo mb-4 md:mb-0 md:mr-20 w-64 h-64 md:w-64 md:h-64"
         />
         <h4 className="text-sm md:text-3xl font-semibold text-center md:text-left">
           Select the subject for which you need to access the curated & structured study material…
