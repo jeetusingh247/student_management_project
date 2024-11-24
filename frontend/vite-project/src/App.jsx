@@ -9,7 +9,7 @@ import ContentPage from "./componets/ContentPage";
 import { Homepage } from "./componets/Homepage";
 import VideoPlaylist from "./componets/video/VideoPlaylist";
 ; // Import the QuizPage component
-
+import ScrollToTop from "./componets/ScrollToTop"; // Import ScrollToTop component
 import './App.css';
 import QuizPage from "./componets/quiz/QuizPage";
 import Chatbot from "./componets/Chatbot";
@@ -17,6 +17,7 @@ import Chatbot from "./componets/Chatbot";
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/explore" element={<ExplorePage />} />
