@@ -11,6 +11,7 @@ import QuizPage from "./componets/quiz/QuizPage";
 import Chatbot from "./componets/Chatbot";
 import Pdf from "./componets/Pdf";
 import ExplorePage from "./componets/Explore";
+import './App.css'
 
 function App() {
     return (
