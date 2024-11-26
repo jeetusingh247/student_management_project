@@ -10,7 +10,7 @@ const ContentPage = () => {
   const [name, setName] = useState("");
 
   const contentOptions = [
-    { id: 1, name: "PYQ" },
+    { id: 1, name: "pdf" },
     { id: 2, name: "Video" },
     { id: 3, name: "Syllabus" },
     { id: 4, name: "Assignment" },
@@ -21,6 +21,9 @@ const ContentPage = () => {
       setIsModalOpen(true); // Open modal on "Assignment" click
     } else if (content.name === "Video") {
       navigate(`/explore/semester4/subject1/unit/${unitId}/video`);
+    }
+    else if(content.name==="pdf"){
+      navigate(`/explore/semester4/subject1/unit/${unitId}/pdf`);
     }
   };
 
