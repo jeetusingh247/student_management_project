@@ -35,10 +35,10 @@ function SubjectPage() {
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-20 w-64 h-64 md:w-64 md:h-64"
+          className="logo mb-4 md:mb-0 md:mr-20 w-50 h-55 md:w-64 md:h-50"
         />
-        <h4 className="text-sm md:text-3xl font-semibold text-center md:text-left">
-          Select the subject for which you need to access the curated & structured study material…
+        <h4 className="text-sm md:text-2xl font-semibold text-center md:text-left">
+          Select the subject for which you need to access the curated & structured study material.
         </h4>
       </div>
       <h2 className="text-center text-3xl font-bold my-4">Semester 4 - Subjects</h2>

@@ -39,10 +39,10 @@ const ContentPage = () => {
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-4 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56"
+          className="logo mb-4 md:mb-0 md:mr-20 w-50 h-55 md:w-64 md:h-50"
         />
         <h4 className="text-lg md:text-2xl font-semibold text-center md:text-left md:ml-8">
-          Select the content type you want to explore for Unit {unitId}…
+          Select the content type you want to explore for Unit {unitId}.
         </h4>
       </div>
       <h2 className="text-center text-3xl font-bold my-4">Unit {unitId} - Content</h2>

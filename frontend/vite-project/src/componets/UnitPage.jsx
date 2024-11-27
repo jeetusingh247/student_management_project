@@ -13,6 +13,7 @@ function UnitsPage() {
     { id: 3, name: "Unit 3" },
     { id: 4, name: "Unit 4" },
     { id: 5, name: "Unit 5" },
+    { id: 6, name: "PYQs" },
   ];
 
   const handleUnitClick = (unit) => {
@@ -26,10 +27,10 @@ function UnitsPage() {
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-10 w-64 h-64 md:w-64 md:h-64"
+          className="logo mb-4 md:mb-0 md:mr-20 w-50 h-55 md:w-64 md:h-50"
         />
         <h4 className="text-lg md:text-2xl font-semibold text-center md:text-left">
-          Select the unit for which you need to access the curated & structured study material…
+          Select the unit for which you need to access the curated & structured study material.
         </h4>
       </div>
       <h2 className="text-center text-3xl font-bold my-4">Subject 1 - Units</h2>
