@@ -26,6 +26,7 @@ function App() {
                 <Route path="/explore/semester4/subject1/unit/:unitId/video" element={<VideoPlaylistWithUnitId />} />
                 <Route path="/explore/semester4/subject1/unit/:unitId/assignment" element={<QuizPageWithUnitId />} />
                 <Route path="/explore/semester4/subject1/unit/:unitId/pdf" element={<PdfPageWithUnitId />} />
+                <Route path="/explore/semester4/subject1/pyqs" element={<PyqPage />} />
             </Routes>
             <Chatbot />
         </Router>
@@ -48,10 +49,15 @@ const QuizPageWithUnitId = () => {
 const PdfPageWithUnitId = () => {
     const { unitId } = useParams();
 
-    // Dynamic PDF URL based on unitId
-    const pdfUrl = `/Assets/pdfs/unit-${unitId}.pdf`; // Example: /assets/pdfs/unit-1.pdf
-
+    // Determine the PDF URL based on the `unitId`
+    const pdfUrl =  `/Assets/pdfs/unit-${unitId}.pdf`;
     return <Pdf pdfUrl={pdfUrl} />;
 };
+const PyqPage = () => {
+    const pdfUrl =  `/Assets/pdfs/pyqs.pdf`;
+    return <Pdf pdfUrl={pdfUrl} />;
+};
+
+
 
 export default App;

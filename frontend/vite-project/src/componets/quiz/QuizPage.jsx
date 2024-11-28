@@ -5,11 +5,15 @@ import Footer from "../homepage/Footer";
 
 const questionSets = {
     "1": [
-        { id: 1, question: "what is your name?", options: ["A", "B", "C", "D"], answer: "A" },
-        { id: 2, question: "Unit 1 Question 2", options: ["A", "B", "C", "D"], answer: "B" },
+        { id: 1, question: "Q1. Which is the most restricted mathematical model of computing devices?", options: ["a. Finite Automata", "b. Push Down Automata", "c. Linear Bounded Automta", "d. Turing Machine"], answer: "a. Finite Automata" },
+        { id: 2, question: "Q2. How many states are required to construct a DFA accepting all strings ending with 'bb'? ", options: ["a. 2", "b. 3", "c. 4", "d. 5"], answer: "b. 3" },
+        { id: 3, question: "Q3. Which algorithm is used for DFA minimization? ", options: ["a. Partitioning Algorithm ", "b. MyHill Nerode Theorem", "c. Pumping Lemma", "d. Both a and b"], answer: "d. Both a and b" },
+        { id: 4, question: "Q4. Which of the Following is a Finite State Automata with Output? ", options: ["a. Mealy Machine", "b. DFA", "c. Turing Machine", "d. Epsilon-NFA "], answer: "a. Mealy Machine" },
+        { id: 5, question: "Q5. The number of initial and final states in a DFA can be ? ", options: ["a. 1 and 0", "b. 0 and 0", "c. 1 and 1", "d. 0 and 1"], answer: "c. 1 and 1" },
+        
     ],
     "2": [
-        { id: 1, question: "Unit 2 Question 1", options: ["A", "B", "C", "D"], answer: "C" },
+        { id: 1, question: "Q2.H", options: ["A", "B", "C", "D"], answer: "C" },
         { id: 2, question: "Unit 2 Question 2", options: ["A", "B", "C", "D"], answer: "D" },
     ],
     // ... other question sets
