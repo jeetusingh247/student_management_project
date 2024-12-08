@@ -50,13 +50,14 @@ const PdfPageWithUnitId = () => {
     const { unitId } = useParams();
 
     // Determine the PDF URL based on the `unitId`
-    const pdfUrl =  `/Assets/pdfs/TAFL_Notes_Unit-${unitId}.pdf`;
+    const pdfUrl =  `/Assets/pdfs/sem4_tafl_notes_unit-${unitId}.pdf`;
     return <Pdf pdfUrl={pdfUrl} />;
 };
 const PyqPage = () => {
-    const pdfUrl =  `/Assets/pdfs/pyqs.pdf`;
+    const pdfUrl =  `/Assets/pdfs/sem4_tafl_pyqs.pdf`;
     return <Pdf pdfUrl={pdfUrl} />;
 };
+
 
 
 export default App;
