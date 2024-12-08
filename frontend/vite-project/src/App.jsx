@@ -59,5 +59,4 @@ const PyqPage = () => {
 };
 
 
-
 export default App;
