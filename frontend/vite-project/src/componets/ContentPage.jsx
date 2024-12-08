@@ -10,7 +10,7 @@ const ContentPage = () => {
   const [name, setName] = useState("");
 
   const contentOptions = [
-    { id: 1, name: "Notes", image: "/Assets/notes1.png" },
+    { id: 1, name: "Notes", image: "/Assets/notes.png" },
     { id: 2, name: "Video", image: "/Assets/youtube.png"  },
     { id: 3, name: "Assignment", image: "/Assets/assesment.png"  },
    
