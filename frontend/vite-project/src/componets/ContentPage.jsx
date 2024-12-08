@@ -10,9 +10,9 @@ const ContentPage = () => {
   const [name, setName] = useState("");
 
   const contentOptions = [
-    { id: 1, name: "Notes" },
-    { id: 2, name: "Video" },
-    { id: 3, name: "Assignment" },
+    { id: 1, name: "Notes", image: "/Assets/notes1.png" },
+    { id: 2, name: "Video", image: "/Assets/youtube.png"  },
+    { id: 3, name: "Assignment", image: "/Assets/assesment.png"  },
    
   ];
 
@@ -46,15 +46,16 @@ const ContentPage = () => {
         </h4>
       </div>
       <h2 className="text-center text-3xl font-bold my-4">Unit {unitId} - Content</h2>
-      <div className="content-cards grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
+      <div className="content-cards flex gap-6 p-6 overflow-x-auto pb-[210px]">
         {contentOptions.map((content) => (
-          <div
-            key={content.id}
-            className="content-card p-6 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-green-400 to-blue-500 text-white"
-            onClick={() => handleContentClick(content)}
-          >
-            <h3 className="text-xl font-semibold mb-2">{content.name}</h3>
-          </div>
+          <img 
+               key={content.id}  
+              src={content.image}
+              alt={content.name}
+              className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2 "
+              onClick={() => handleContentClick(content)}
+            />
+
         ))}
       </div>
 
