@@ -23,7 +23,7 @@ function Chatbot() {
     };
 
     return (
-        <div className="fixed bottom-2 right-2 md:bottom-5 md:right-5">
+        <div className="fixed bottom-10 right-5 md:bottom-10 md:right-10">
             <button
                 onClick={() => setIsVisible(!isVisible)}
                 className="bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
