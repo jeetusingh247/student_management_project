@@ -13,10 +13,15 @@ function UnitsPage() {
     { id: 3, name: "Unit 3" },
     { id: 4, name: "Unit 4" },
     { id: 5, name: "Unit 5" },
+    { id: 6, name: "PYQs" },
   ];
 
   const handleUnitClick = (unit) => {
-    navigate(`/explore/semester4/subject1/unit/${unit.id}`);
+    if (unit.name === "PYQs") {
+      navigate(`/explore/semester4/subject1/pyqs`);
+    } else {
+      navigate(`/explore/semester4/subject1/unit/${unit.id}`);
+    }
   };
 
   return (
@@ -26,13 +31,16 @@ function UnitsPage() {
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-10 w-64 h-64 md:w-64 md:h-64"
+          className="logo mb-4 md:mb-0 md:mr-20 w-50 h-55 md:w-64 md:h-50"
         />
         <h4 className="text-lg md:text-2xl font-semibold text-center md:text-left">
-          Select the unit for which you need to access the curated & structured study material…
+          Select the unit for which you need to access the curated & structured
+          study material.
         </h4>
       </div>
-      <h2 className="text-center text-3xl font-bold my-4">Subject 1 - Units</h2>
+      <h2 className="text-center text-3xl font-bold my-4">
+        Subject 1 - Units
+      </h2>
       <div className="unit-cards grid grid-cols-1 sm:grid-cols-2 gap-8 p-8 mx-6">
         {units.map((unit) => (
           <div
@@ -56,14 +64,12 @@ function UnitsPage() {
           max-width: 1200px;
         }
         .unit-card {
-          padding: 44px; /* Adjusted padding */
+          padding: 44px;
           border-radius: 16px;
           cursor: pointer;
           transition: transform 0.2s, box-shadow 0.2s;
           background-color: #68d391; /* Default green color */
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          width: (100%); /* Reduced width */
-          height: auto; /* Adjusted height */
         }
         .unit-card:hover {
           transform: scale(1.05);

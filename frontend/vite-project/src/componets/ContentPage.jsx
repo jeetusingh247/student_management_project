@@ -1,60 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar2 from "./Navbar2";
 import Footer from "./homepage/Footer";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContentPage = () => {
   const navigate = useNavigate();
   const { unitId } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
+  const [contentOptions, setContentOptions] = useState([]);
 
-  const contentOptions = [
-    { id: 1, name: "pdf" },
-    { id: 2, name: "Video" },
-    { id: 3, name: "Syllabus" },
-    { id: 4, name: "Assignment" },
-  ];
+  useEffect(() => {
+    // Simulate API fetch for content options
+    setContentOptions([
+      { id: 1, name: "Notes", image: "/Assets/notes.png" },
+      { id: 2, name: "Video", image: "/Assets/youtube.png" },
+      { id: 3, name: "Assignment", image: "/Assets/assesment.png" },
+    ]);
+  }, []);
 
   const handleContentClick = (content) => {
     if (content.name === "Assignment") {
       setIsModalOpen(true); // Open modal on "Assignment" click
     } else if (content.name === "Video") {
-      navigate(`/explore/semester4/subject1/unit/${unitId}/video`);
-    }
-    else if(content.name==="pdf"){
+      if (unitId === "1") {
+        navigate(`/explore/semester4/subject1/unit/1/video`);
+      } else if (["2", "3", "4", "5"].includes(unitId)) {
+        toast.error("Content will be available soon!", {
+          duration: 3000,
+          position: "top-center",
+        });
+      }
+    } else if (content.name === "Notes") {
       navigate(`/explore/semester4/subject1/unit/${unitId}/pdf`);
     }
   };
 
   const startQuiz = () => {
+    if (!name.trim()) {
+      toast.error("Name cannot be empty!", { duration: 3000, position: "top-center" });
+      return;
+    }
     setIsModalOpen(false); // Close the modal
     navigate(`/explore/semester4/subject1/unit/${unitId}/assignment`, { state: { name } });
   };
 
+  // Validation for invalid unitId
+  if (!unitId || isNaN(unitId)) {
+    toast.error("Invalid Unit ID", {
+      duration: 3000,
+      position: "top-center",
+    });
+    return null;
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar2 />
+      <Toaster />
       <div className="logo-header flex flex-col md:flex-row items-center justify-center mt-16 mb-8">
         <img
           src="/Assets/logo.png"
           alt="Website Logo"
-          className="logo mb-4 md:mb-0 md:mr-4 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56"
+          className="logo mb-4 md:mb-0 md:mr-20 w-50 h-55 md:w-64 md:h-50"
         />
         <h4 className="text-lg md:text-2xl font-semibold text-center md:text-left md:ml-8">
-          Select the content type you want to explore for Unit {unitId}…
+          Select the content type you want to explore for Unit {unitId}.
         </h4>
       </div>
       <h2 className="text-center text-3xl font-bold my-4">Unit {unitId} - Content</h2>
-      <div className="content-cards grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
+      <div className="content-cards flex gap-6 p-6 overflow-x-auto pb-[210px]">
         {contentOptions.map((content) => (
-          <div
+          <img
             key={content.id}
-            className="content-card p-6 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-green-400 to-blue-500 text-white"
+            src={content.image}
+            alt={`${content.name} icon`}
+            className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2"
             onClick={() => handleContentClick(content)}
-          >
-            <h3 className="text-xl font-semibold mb-2">{content.name}</h3>
-          </div>
+          />
         ))}
       </div>
 

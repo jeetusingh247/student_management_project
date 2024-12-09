@@ -18,7 +18,6 @@ const Pdf = ({ pdfUrl }) => {
                     <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.8.162/build/pdf.worker.min.js">
                         <Viewer fileUrl={pdfUrl} />
                     </Worker>
-                    b
                 </div>
                 <div className="flex justify-center p-4 bg-gray-100">
                     <button
