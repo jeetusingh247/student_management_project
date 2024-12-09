@@ -76,7 +76,7 @@ const ContentPage = () => {
             key={content.id}
             src={content.image}
             alt={`${content.name} icon`}
-            className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2"
+            className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2 object-cover transition-transform duration-300 hover:scale-110 hover:shadow-lg cursor-pointer"
             onClick={() => handleContentClick(content)}
           />
         ))}
