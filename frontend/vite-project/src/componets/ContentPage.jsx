@@ -1,40 +1,64 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar2 from "./Navbar2";
 import Footer from "./homepage/Footer";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContentPage = () => {
   const navigate = useNavigate();
   const { unitId } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
+  const [contentOptions, setContentOptions] = useState([]);
 
-  const contentOptions = [
-    { id: 1, name: "Notes", image: "/Assets/notes.png" },
-    { id: 2, name: "Video", image: "/Assets/youtube.png"  },
-    { id: 3, name: "Assignment", image: "/Assets/assesment.png"  },
-   
-  ];
+  useEffect(() => {
+    // Simulate API fetch for content options
+    setContentOptions([
+      { id: 1, name: "Notes", image: "/Assets/notes.png" },
+      { id: 2, name: "Video", image: "/Assets/youtube.png" },
+      { id: 3, name: "Assignment", image: "/Assets/assesment.png" },
+    ]);
+  }, []);
 
   const handleContentClick = (content) => {
     if (content.name === "Assignment") {
       setIsModalOpen(true); // Open modal on "Assignment" click
     } else if (content.name === "Video") {
-      navigate(`/explore/semester4/subject1/unit/${unitId}/video`);
-    }
-    else if(content.name==="Notes"){
+      if (unitId === "1") {
+        navigate(`/explore/semester4/subject1/unit/1/video`);
+      } else if (["2", "3", "4", "5"].includes(unitId)) {
+        toast.error("Content will be available soon!", {
+          duration: 3000,
+          position: "top-center",
+        });
+      }
+    } else if (content.name === "Notes") {
       navigate(`/explore/semester4/subject1/unit/${unitId}/pdf`);
     }
   };
 
   const startQuiz = () => {
+    if (!name.trim()) {
+      toast.error("Name cannot be empty!", { duration: 3000, position: "top-center" });
+      return;
+    }
     setIsModalOpen(false); // Close the modal
     navigate(`/explore/semester4/subject1/unit/${unitId}/assignment`, { state: { name } });
   };
 
+  // Validation for invalid unitId
+  if (!unitId || isNaN(unitId)) {
+    toast.error("Invalid Unit ID", {
+      duration: 3000,
+      position: "top-center",
+    });
+    return null;
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar2 />
+      <Toaster />
       <div className="logo-header flex flex-col md:flex-row items-center justify-center mt-16 mb-8">
         <img
           src="/Assets/logo.png"
@@ -48,14 +72,13 @@ const ContentPage = () => {
       <h2 className="text-center text-3xl font-bold my-4">Unit {unitId} - Content</h2>
       <div className="content-cards flex gap-6 p-6 overflow-x-auto pb-[210px]">
         {contentOptions.map((content) => (
-          <img 
-               key={content.id}  
-              src={content.image}
-              alt={content.name}
-              className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2 "
-              onClick={() => handleContentClick(content)}
-            />
-
+          <img
+            key={content.id}
+            src={content.image}
+            alt={`${content.name} icon`}
+            className="h-[246px] w-[246px] rounded-lg shadow-[0 1px 8px 0 rgba(0,0,0,.08)] border-2"
+            onClick={() => handleContentClick(content)}
+          />
         ))}
       </div>
 
